@@ -23,10 +23,10 @@ app.use("/api/auth", authRoutes);
 const __dirname = path.resolve();
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/auth-cl/dist")));
+  app.use(express.static(path.join(__dirname, "../auth-cl/dist")));
 
   app.get("*", (req, resp) => {
-    resp.sendFile(path.resolve(__dirname, "auth-cl", "dist", "index.html"));
+    resp.sendFile(path.resolve(__dirname, "../auth-cl", "dist", "index.html"));
   });
 }
 
