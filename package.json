@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development nodemon auth-serv/app.js",
     "start": "cross-env NODE_ENV=production node auth-serv/app.js",
-    "build": "npm i && npm i --prefix auth-cl && npm run build --prefix auth-cl"
+    "build": "npm i && npm i --prefix auth-cl --production=false && npm run build --prefix auth-cl"
   },
   "author": "HRIDYANSHU",
   "license": "ISC",
